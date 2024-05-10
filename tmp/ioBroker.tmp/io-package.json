@@ -1,0 +1,120 @@
+{
+    "common": {
+        "name": "tmp",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "tmp",
+        "titleLang": {
+            "en": "tmp",
+            "de": "tmp",
+            "ru": "tmp",
+            "pt": "tmp",
+            "nl": "tmp",
+            "fr": "tmp",
+            "it": "tmp",
+            "es": "tmp",
+            "pl": "tmp",
+            "uk": "tmp",
+            "zh-cn": "tmp"
+        },
+        "desc": {
+            "en": "tmp",
+            "de": "tmp",
+            "ru": "tmp",
+            "pt": "tmp",
+            "nl": "tmp",
+            "fr": "tmp",
+            "it": "tmp",
+            "es": "tmp",
+            "pl": "tmp",
+            "uk": "tmp",
+            "zh-cn": "tmp"
+        },
+        "authors": ["tmp <tmp@tmp.org>"],
+        "keywords": ["tmp"],
+        "license": "MIT",
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "tmp.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/tmp/ioBroker.tmp/main/admin/tmp.png",
+        "readme": "https://github.com/tmp/ioBroker.tmp/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "mode": "daemon",
+        "type": "climate-control",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "json"
+        },
+        "eraseOnUpload": true,
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.0.0"
+            }
+        ]
+    },
+    "native": {
+        "email": "",
+        "Password": "",
+        "country": "de",
+        "pollInterval": 30,
+        "temperatureUnit": "C",
+        "keepValues": false,
+        "challengeId": "",
+        "dyson_code": "",
+        "token": "",
+        "disableReconnectLogging": false
+    },
+    "encryptedNative": ["Password", "token"],
+    "protectedNative": ["Password", "token"],
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "If connected to dyson device",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
